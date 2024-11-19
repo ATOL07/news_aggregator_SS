@@ -1,0 +1,15 @@
+/* src/styles.css */
+.background-light {
+    background-image: url('/src/assets/light.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .background-dark {
+    background-image: url('/src/assets/dark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
