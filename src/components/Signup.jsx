@@ -1,8 +1,9 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
-    username: '',
+    name: '',
     email: '',
     password: '',
   });
@@ -18,6 +19,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    axios.post('http://localhost:5000/api/auth/signup',formData);
   };
 
   return (
@@ -30,12 +32,12 @@ const Signup = () => {
         
         <div className="space-y-4">
           <div>
-            <label htmlFor="username" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Username</label>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Username</label>
             <input
               type="text"
-              id="username"
-              name="username"
-              value={formData.username}
+              id="name"
+              name="name"
+              value={formData.name}
               onChange={handleChange}
               className="w-full px-4 py-2 mt-1 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-blue-500"
               required
